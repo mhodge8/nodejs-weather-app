@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/style.css">
+
+        <title>Weather Web App</title>
+    </head>
+    <body class= "<%= timeOfDay %>">
+        <h1 class="title">Current Weather</h1>
+        <div class="container">
+            <form action="/" method="POST">
+                <label for="cityInput">Enter City Name:</label>
+                <input id="cityInput" type="text" name="userCity">
+                <button type="submit">Go</button>
+            </form>
+    
+            <h1>Error finding city, please try again</h1>
+    
+            <form action="/" method="get">
+                <button type="submit">Current Location</button>
+            </form>
+        </div>
+        
+
+    </body>
+</html>

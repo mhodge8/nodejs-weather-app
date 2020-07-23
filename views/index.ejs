@@ -8,7 +8,31 @@
 
         <title>Weather Web App</title>
     </head>
-    <body>
-        
+    <body class= "<%= timeOfDay %>">
+        <h1 class="title">Current Weather</h1>
+        <div class="container">
+            
+            <form action="/" method="POST">
+                <label for="cityInput">Enter City Name:</label>
+                <input id="cityInput" type="text" name="userCity" placeholder="Ex. Boston, US">
+                <button type="submit">Go</button>
+            </form>
+
+            <h1><%= cityName %> </h1>
+            <img src="<%= imgUrl %> ">
+            <div class="weather-container">
+
+                <div>   
+                    <h2><%= temperature %>°F</h2>
+                    <h2 class="descrip"><%= description %></h2>
+                </div>
+                <div>
+                    <p>Feels like: <%= feelsLike %>°F</p>
+                    <p>Humidity: <%= humidity %>%</p>
+                    <p>Wind: <%= wind %> mph</p>
+                </div>
+            </div>
+        </div>
+
     </body>
 </html>
